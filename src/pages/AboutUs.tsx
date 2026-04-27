@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  MapPin, 
-  Lightbulb, 
+import {
+  MapPin,
+  Lightbulb,
   CheckCircle,
   Heart,
   Award,
   Zap
 } from 'lucide-react';
-import { 
-  ComposableMap, 
-  Geographies, 
-  Geography, 
-  Marker 
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker
 } from 'react-simple-maps';
 import { useLanguage } from '../context/LanguageContext';
 import ContactCTA from '../components/ContactCTA';
@@ -49,7 +49,7 @@ const CompanyIntro = () => {
     <section className="py-12 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -57,9 +57,9 @@ const CompanyIntro = () => {
             className="relative"
           >
             <div className="relative aspect-[3/2] md:aspect-[4/3] overflow-hidden shadow-2xl z-10 group">
-              <img 
-                src="/images/office-image.jpg" 
-                alt="Premium Textile Fabric Rolls" 
+              <img
+                src="/images/office-image.jpg"
+                alt="Premium Textile Fabric Rolls"
                 className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-out"
                 referrerPolicy="no-referrer"
               />
@@ -69,7 +69,7 @@ const CompanyIntro = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-light -z-0" />
             <div className="absolute top-1/2 -translate-y-1/2 -left-8 w-16 h-[1px] bg-brand-secondary/30 hidden lg:block" />
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -116,10 +116,10 @@ const CoreStrengths = () => {
         <h2 className="text-3xl md:text-4xl font-sans font-medium text-brand-heading mb-16 text-center tracking-tight">
           {t.aboutPage.strengths.title}
         </h2>
-        
+
         <div className="grid md:grid-cols-3 gap-12">
           {strengths.map((item, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +140,7 @@ const CoreStrengths = () => {
 
 const FacilityCarousel = ({ title, subtitle, images, variant = "default" }: { title: string, subtitle: string, images: string[], variant?: "default" | "alternate" }) => {
   const [isPaused, setIsPaused] = React.useState(false);
-  
+
   // Duplicate images for infinite loop effect
   const displayImages = [...images, ...images];
   const bgClass = variant === "alternate" ? "bg-[#f8faff]" : "bg-white";
@@ -148,7 +148,7 @@ const FacilityCarousel = ({ title, subtitle, images, variant = "default" }: { ti
   return (
     <section className={`py-24 md:py-32 ${bgClass} ${variant === "alternate" ? "border-y border-brand-deep/5" : ""} transition-colors duration-500`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -157,7 +157,7 @@ const FacilityCarousel = ({ title, subtitle, images, variant = "default" }: { ti
         >
           {/* Subtle accent line */}
           <div className="absolute top-0 left-0 w-8 h-[2px] bg-brand-secondary/30 -translate-y-4" />
-          
+
           <h2 className="text-2xl md:text-3xl font-sans font-medium text-brand-heading mb-3 tracking-tight uppercase">
             {title}
           </h2>
@@ -167,10 +167,10 @@ const FacilityCarousel = ({ title, subtitle, images, variant = "default" }: { ti
         </motion.div>
 
         <div className="relative overflow-hidden group">
-          <motion.div 
+          <motion.div
             className="flex gap-4 md:gap-8"
             animate={{ x: isPaused ? undefined : ["0%", "-50%"] }}
-            transition={{ 
+            transition={{
               x: {
                 repeat: Infinity,
                 duration: 40,
@@ -182,13 +182,13 @@ const FacilityCarousel = ({ title, subtitle, images, variant = "default" }: { ti
             style={{ width: "fit-content" }}
           >
             {displayImages.map((src, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="flex-shrink-0 w-[280px] md:w-[420px] aspect-[4/3] rounded-none overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-deep/5 bg-white relative group/item"
               >
-                <img 
-                  src={src} 
-                  alt={`${title} facility ${idx + 1}`} 
+                <img
+                  src={src}
+                  alt={`${title} facility ${idx + 1}`}
                   className="w-full h-full object-cover grayscale-[0.3] group-hover/item:grayscale-0 transition-all duration-1000 ease-out group-hover/item:scale-110"
                   referrerPolicy="no-referrer"
                 />
@@ -197,7 +197,7 @@ const FacilityCarousel = ({ title, subtitle, images, variant = "default" }: { ti
               </div>
             ))}
           </motion.div>
-          
+
           {/* Refined Fade Edges matching the section background */}
           <div className={`absolute inset-y-0 left-0 w-24 bg-gradient-to-r ${variant === "alternate" ? "from-[#f8faff]" : "from-white"} to-transparent z-10 pointer-events-none`} />
           <div className={`absolute inset-y-0 right-0 w-24 bg-gradient-to-l ${variant === "alternate" ? "from-[#f8faff]" : "from-white"} to-transparent z-10 pointer-events-none`} />
@@ -209,35 +209,38 @@ const FacilityCarousel = ({ title, subtitle, images, variant = "default" }: { ti
 
 const Facilities = () => {
   const { t } = useLanguage();
-  
+
   const warehouseImages = [
-    '/images/home-image1.jpg',
-    '/images/home-image2.jpg',
-    '/images/home-image3.jpg',
-    '/images/product-sunshinesatin-1.jpg',
-    '/images/product-acetatesatin-1.jpg'
+    '/images/warehouse1.jpg',
+    '/images/warehouse2.jpg',
+    '/images/warehouse3.jpg',
+    '/images/warehouse4.jpg',
+    '/images/warehouse5.jpg',
+    '/images/warehouse6.jpg'
   ];
 
   const factoryImages = [
-    '/images/office-image.jpg',
-    '/images/office-image2.jpg',
-    '/images/home-image3.jpg',
-    '/images/home-image2.jpg',
-    '/images/home-image1.jpg'
+    '/images/factory1.jpg',
+    '/images/factory2.jpg',
+    '/images/factory3.jpg',
+    '/images/factory4.jpg',
+    '/images/factory5.jpg',
+    '/images/factory6.jpg',
+    '/images/factory7.jpg',
   ];
 
   return (
     <>
-      <FacilityCarousel 
-        title={t.aboutPage.warehouse.title} 
-        subtitle={t.aboutPage.warehouse.subtitle} 
+      <FacilityCarousel
+        title={t.aboutPage.warehouse.title}
+        subtitle={t.aboutPage.warehouse.subtitle}
         images={warehouseImages}
         variant="alternate"
       />
-      <FacilityCarousel 
-        title={t.aboutPage.factory.title} 
-        subtitle={t.aboutPage.factory.subtitle} 
-        images={factoryImages} 
+      <FacilityCarousel
+        title={t.aboutPage.factory.title}
+        subtitle={t.aboutPage.factory.subtitle}
+        images={factoryImages}
       />
     </>
   );
@@ -245,10 +248,10 @@ const Facilities = () => {
 
 const GlobalReach = () => {
   const { t } = useLanguage();
-  
+
   // Highlighted countries names in topojson (Approximate matching for world-atlas)
   const highlightedNames = [
-    "Indonesia", "United Arab Emirates", "India", "Bangladesh", 
+    "Indonesia", "United Arab Emirates", "India", "Bangladesh",
     "Saudi Arabia", "Egypt", "Morocco", "Brazil", "China"
   ];
 
@@ -269,7 +272,7 @@ const GlobalReach = () => {
     <section className="py-24 md:py-32 bg-[#f8faff] border-y border-brand-deep/5 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1a2e35_1px,transparent_1px)] [background-size:40px_40px]" />
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -324,7 +327,7 @@ const GlobalReach = () => {
                   })
                 }
               </Geographies>
-              
+
               {markers.map(({ name, coordinates, isBase }) => (
                 <Marker key={name} coordinates={coordinates}>
                   {isBase ? (
@@ -373,7 +376,7 @@ const GlobalReach = () => {
         </motion.div>
 
         {/* Country Tags */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
