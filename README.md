@@ -1,22 +1,20 @@
 # R-Fashion Textile Website
 
-Company website for R-Fashion Textile, built and deployed by me from scratch.
+Company website for R-Fashion Textile, built by me and live at https://rfashiontextile.com
 
-Live site: https://rfashiontextile.com
+## How I built it
+I collected website inspirations I liked, then built the whole site by prompting Google AI Studio and refining the result until it matched what I wanted. I didn't hand write the code. My part was the direction, the design choices, and getting it live.
 
-## What I did
-- Built the whole site on my own: [list the pages, e.g. home, about us, product pages]
-- Bought the domain and set up hosting and deployment (Vercel)
-- Made [how many] short videos for WeChat marketing that fed into the site
+All photos on the site were taken by me.
 
-## Tools
-Vite, React 18, TypeScript, Vercel. First draft generated with Google AI Studio, then edited by me: [what you changed yourself].
+## What I handled myself
+- Finding design references and deciding the look and layout
+- Prompting and iterating with Google AI Studio
+- Taking every photo used on the site
+- Buying the domain and hosting the site on a server
 
-## Results
-[Only a number you can back up, e.g. inquiries before and after. Leave this section out if you don't have one.]
-
-## Screenshot
-(add a screenshot of the homepage)
+## Tech
+Vite, React 18, TypeScript. Built with Google AI Studio.
 
 ## Run it locally
 npm install
