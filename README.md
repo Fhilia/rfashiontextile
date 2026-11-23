@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# R-Fashion Textile Website
 
-# Run and deploy your AI Studio app
+Company website for R-Fashion Textile, built and deployed by me from scratch.
 
-This contains everything you need to run your app locally.
+Live site: https://rfashiontextile.com
 
-View your app in AI Studio: https://ai.studio/apps/dbc6fb57-62dc-4800-a927-440795de74f6
+## What I did
+- Built the whole site on my own: [list the pages, e.g. home, about us, product pages]
+- Bought the domain and set up hosting and deployment (Vercel)
+- Made [how many] short videos for WeChat marketing that fed into the site
 
-## Run Locally
+## Tools
+Vite, React 18, TypeScript, Vercel. First draft generated with Google AI Studio, then edited by me: [what you changed yourself].
 
-**Prerequisites:**  Node.js
+## Results
+[Only a number you can back up, e.g. inquiries before and after. Leave this section out if you don't have one.]
 
+## Screenshot
+(add a screenshot of the homepage)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Run it locally
+npm install
+npm run dev
